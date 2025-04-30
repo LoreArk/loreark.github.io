@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioascent - Lorenzo's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Fixed navbar - same as homepage -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="dev-name">Lorenzo Pusateri</div>
+                <div class="dev-subtitle">Gameplay Programmer</div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/LoreArk" target="blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/lorenzo-pusateri" target="blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-resume resume-btn" href="#" title="Download Resume"><i class="fas fa-file-download"></i> Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        
+        <!-- Main Project Video -->
+        <section id="project-showcase" >
+            <div class="container">
+                <div class="project-video-container">
+                    <iframe src="https://www.youtube.com/embed/f8osxGir1X4?autoplay=1&mute=1&start=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Header -->
+        <section id="project-header" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6  project-meta-full" >
+                        <h1 class="project-detail-title">Minus One Project</h1>
+                        <div class="project-meta-text">
+                            <p>
+                                A first-person survival horror shooter developed on Unity using C#. The enemy model was conceptualized and modeled by a concept artist and 3D artist.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="project-meta-full">
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team Size: 1 people</span> 
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>Development Time: 5 months</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code"></i>
+                                <span>Technology: Unity / C# </span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-tag"></i>
+                                <span>Solo developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- GIF/Image Block -->
+        <section class="project-content-block section-padding pt-0">
+            <div class="container">
+                <div class="content-block image-block">
+                    
+                    <h2>First-person Controller</h2>
+                    <p>A full-body first person controller aimed at replicating the feeling and functionality 
+                        of first-person chapters in Resident Evil games. 
+                        It was developed by analyzing the character controller in Resident Evil 7, 
+                        with the assistance of mods, particularly the ‘free camera’ mode, which allowed observation of the character’s 
+                        functionality from an external perspective. This was also useful for analyzing level streaming management, 
+                        spacing between the character and enemies (a key aspect of this first-person combat system), and other elements.
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <!-- <p class="feature-caption">
+                        Bouncing bullet gameplay example.
+                    </p> -->
+                    
+                    <h2>Combat System</h2>
+                    <p>
+                        The combat system incorporates a state-machine driven AI, both shooter and melee approaches, along with a defensive stance and parry skill. It operates on an enemy body part damage system, where each weapon possesses different attributes (such as dismemberment, stun, penetration), affecting enemy body parts in various ways.
+                    </p>
+                    
+                    <h2>UI Systems</h2>
+                    <p>Slot-based inventory system inspired by Resident Evil, featuring a key items panel and notes panel.
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p>Crafting System</p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p class="feature-caption">
+                        I tested two UI methods for crafting: a crafting table integrated into the same panel as the inventory, versus a crafting table in a dedicated panel.
+                    </p>
+
+                    <p>UI <strong>Map system</strong> that updates dynamically based on player interactions and exploration.</p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+
+                    <h2>Perk System</h2>
+                    <p>A perk system with UI handled through Unity prefabs and an interface system. 
+                        Perks are gatherable items equippable on four body parts and weapons. 
+                        They offer a wide variety of effects, ranging from dodge skills to abilities 
+                        like seeing enemy health or detecting them through walls. 
+                        They can affect movement statistics, projectile physics, fire modes, and attribute modifiers. 
+                        Each perk affects the weight level, which alters player speed and movement abilities such as climbing or crouching. 
+                        Perks are purchasable from a merchant via a dedicated UI menu, featuring economy logic.
+                    </p>
+                    <p>An interactables system featuring a variety of simple puzzles, 
+                        including doors requiring keys, safes or doors with randomly generated codes linked to a ‘document’ item, 
+                        power switches connected to power lines that activate lights, automatic doors, and other elements.</p>
+                </div>
+            </div>
+
+        <!-- Next Project Navigation -->
+        <section class="project-navigation section-padding pt-0">
+            <div class="container">
+                <div class="next-prev-container">
+                    <a href="laughingstonks.html" class="next-project">
+                        <span>Next Project</span>
+                        <h3>Laughing Stonks</h3>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - same as homepage -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Lorenzo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-social">
+                        <a href="#" title="Itch.io"><i class="fab fa-itch-io"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

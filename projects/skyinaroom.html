@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky In a Room - Lorenzo's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Fixed navbar - same as homepage -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="dev-name">Lorenzo Pusateri</div>
+                <div class="dev-subtitle">Gameplay Programmer</div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/LoreArk" target="blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/lorenzo-pusateri" target="blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link nav-resume resume-btn" href="#" title="Download Resume"><i class="fas fa-file-download"></i> Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        
+        <!-- Main Project Video -->
+        <section id="project-showcase" >
+            <div class="container">
+                <div class="project-video-container">
+                    <iframe src="https://www.youtube.com/embed/TZ1OhqS6asI?autoplay=1&mute=1&start=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Header -->
+        <section id="project-header" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6  project-meta-full" >
+                        <h1 class="project-detail-title">Sky In a Room</h1>
+                        <div class="project-meta-text">
+                            <p>
+                                A 2D side-scrolling shooter-platformer born from the idea of enhancing environmental interaction in a Metroid-like game, and inspired by the manga <em>Blame!</em>
+                            </p>
+                            <p>
+                                The project started with a prototype for an interactable tile system, allowing the player to reshape platforms or destroy sections of the level.  
+                                I later expanded the system to react dynamically to enemies and introduced a jump mechanic based on the recoil of the player’s charged shot.  
+                                These experimental features eventually came together into a fully playable demo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="project-meta-full">
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team Size: 2 people</span> 
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>Development Time: 14 days</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-code"></i>
+                                <span>Technology: Unreal / Blueprints </span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-tag"></i>
+                                <span>Programmer, Game Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- GIF/Image Block -->
+        <section class="project-content-block section-padding pt-0">
+            <div class="container">
+                <div class="content-block image-block">
+                    
+                    <h2>Main Features</h2>
+                    <p>Physics-based bouncing bullets can be utilized to shoot behind obstacles, while releasing a charged shot pushes the player, aiding in platforming.
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p class="feature-caption">
+                        Bouncing bullet gameplay example.
+                    </p>
+                    <p>
+                        Shootable tiles system: various types of interactive tiles 
+                        with unique interactions and behaviors triggered by a ‘damagable’ interface. 
+                        Each type of tile can interact with the others:
+                        <ul class="lessons-list">
+                            <li>Falling tile groups – consist of individual tiles that can be freely assembled in the editor. 
+                                Damaging them activates their group physics, altering the walkable area and platform shape. 
+                                When falling, they can damage the player, enemies, and other tiles.”</li>
+                            <li>Explosive tile – detonate upon impact, damaging everything nearby. 
+                                They can trigger chain reactions if other explosives or shootable tiles are in proximity.</li>
+                            <li>Destructible tile – can be destroyed by the player’s attacks or by other interactive tiles, 
+                                allowing passages to be opened in the level.</li>
+                        </ul>
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p class="feature-caption">
+                        Explosive and Falling tiles combined.
+                    </p>
+
+                </div>
+            </div>
+
+        <!-- Next Project Navigation -->
+        <section class="project-navigation section-padding pt-0">
+            <div class="container">
+                <div class="next-prev-container">
+                    <a href="../" class="next-project">
+                        <span>Next Project</span>
+                        <h3>Back to all projects</h3>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - same as homepage -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Lorenzo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-social">
+                        <a href="#" title="Itch.io"><i class="fab fa-itch-io"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
