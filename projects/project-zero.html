@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name - Lorenzo's Portfolio</title>
+    <title>Project Zero - Lorenzo's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -15,13 +15,17 @@
             <div class="navbar-brand">
                 <div class="dev-name">Lorenzo Pusateri</div>
                 <div class="dev-subtitle">Gameplay Programmer</div>
-                <div><a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a></div>
+                <!-- <div><a href="../" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a></div> -->
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
                     </li>
@@ -61,8 +65,17 @@
                     <div class="col-md-6  project-meta-full" >
                         <h1 class="project-detail-title">Zero Project</h1>
                         <div class="project-meta-text">
-                            <p>This project was an opportunity to explore advanced gameplay systems in Unreal Engine. We focused on responsive controls, modular AI, and a dynamic event system to create a compelling and immersive experience.</p>
-                            <p>My main contributions included the player interaction system, enemy behavior logic, and implementation of narrative events through blueprints and C++.</p>
+                            <p>Zero is my first attempt at releasing a demo for an ambitious project  
+                                developed using Unreal Engine.  
+                                The core idea is to create a horror game where the player can possess and control enemies,  
+                                and use magic spells as part of stealth-based mechanics.  
+                                We are currently polishing the visual aspects before making the demo available.</p>
+                                
+                                <p>I designed and programmed Zero, handling every aspect of its development.  
+                                On the programming side, I implemented all core systems — from gameplay mechanics  
+                                to the save/load system and level management.  
+                                Most of the project is written in C++, with Blueprints used where fast iteration  
+                                was beneficial for design purposes.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -115,98 +128,66 @@
         <section class="project-content-block section-padding pt-0">
             <div class="container">
                 <div class="content-block image-block">
-                    <h2>Feature Highlight: [Feature Name]</h2>
+                    <h2>Enemy Possession and Combat</h2>
                     <p>
-                        Brief explanation of a specific gameplay feature or system that you implemented. This text introduces the GIF or image that follows.
+                        A system that allows the player to possess and control enemy characters, either through a full-body first-person controller or by viewing the world from their perspective.  
+                        Each enemy type offers unique interactions with the environment and different combat abilities for engaging other enemies.  
+                        Enemies can fight among themselves as well as with the player.  
+                        Dynamic targeting during combat is managed by a custom team system component.  
+                        Possessing certain enemies can also unlock specific environmental interactions based on their equipped weapon — for example, igniting explosive barrels with a torch or shooting them with a gun, or breaking barriers using a melee weapon.
                     </p>
                     <div class="feature-media">
                         <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
                     </div>
                     <p class="feature-caption">
-                        Caption explaining what's happening in the GIF above. You can provide more technical details about implementation.
+                        Possession and team system in action: the player uses possession to control an enemy with a gun and attack another enemy.  
+                        The team system makes the attacked enemy react and engage in combat.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Text Block with Code -->
-        <!-- <section class="project-content-block section-padding pt-0">
-            <div class="container">
-                <div class="content-block code-block">
-                    <h2>Technical Implementation</h2>
+                    <h2>Enemy AI</h2>
                     <p>
-                        If you want to showcase specific code snippets, you can include them here with explanations. This is optional but can be valuable for demonstrating your coding approach.
-                    </p>
-                    <div class="code-snippet">
-                        <pre><code>
-// Example code snippet
-void UpdatePlayerMovement() {
-    Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-    
-    if (direction.magnitude > 0.1f) {
-        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-        
-        transform.rotation = Quaternion.Euler(0f, angle, 0f);
-        Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-        controller.Move(moveDir.normalized * speed * Time.deltaTime);
-    }
-}
-                        </code></pre>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Another GIF/Image Block -->
-        <!-- <section class="project-content-block section-padding pt-0">
-            <div class="container">
-                <div class="content-block image-block">
-                    <h2>Feature Highlight: [Another Feature]</h2>
-                    <p>
-                        Description of another gameplay feature or system that you implemented. This text introduces the following GIF or image.
-                    </p>
-                    <div class="feature-media">
-                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
-                    </div>
-                    <p class="feature-caption">
-                        Caption explaining the second feature demonstration.
+                        The perception system draws inspiration from Unreal Engine’s perception component 
+                        functionality and logic, but streamlines the system to include only the features 
+                        required by the specific game design of the project. The perception system and the behavior 
+                        tree manage the numerous AI states and transitions needed for this stealth action design, 
+                        such as Passive, Investigating, Seeking, Frozen, Attacking, Alerting the group, and more. 
+                        Additionally, the behavior tasks of some states can differ depending on whether 
+                        the AI agent is part of a “team group” or not.
                     </p>
                 </div>
             </div>
-        </section> -->
-        <!-- Content Blocks - These can be rearranged or duplicated as needed -->
-        <!-- Text Block -->
-        <section class="project-content-block section-padding pt-0">
             <div class="container">
+                <!-- Text Block -->
                 <div class="content-block text-block">
                     <h2>Development Challenges</h2>
                     <p>
-                        This section allows you to describe specific challenges faced during development and how you overcame them. You can discuss technical hurdles, design problems, or interesting solutions you implemented.
+                        Building Zero was my first real attempt at a complex project in Unreal Engine and C++, and the possession system proved to be the most challenging part — requiring deep knowledge of player control, AI behavior, and pawn switching.
                     </p>
                     <p>
-                        You can add multiple paragraphs to elaborate on different aspects of the development process, your specific contributions, or interesting technical details about the implementation.
+                        Designing a team-based combat system where enemies could dynamically react and switch targets added further complexity. This led me to create a modular team system that enhanced both AI behavior and gameplay responsiveness.
+                    </p>
+                    <p>
+                        The animation and locomotion system was also a key to achieving the visual polish I wanted. I studied Lyra and ALS, tailoring their features to suit my game’s needs and maintain smooth player feedback.
                     </p>
                 </div>
             </div>
-        </section>
-        <!-- Lessons Learned -->
-        <section class="project-content-block section-padding pt-0">
+            <!-- Lessons Learned -->
             <div class="container">
                 <div class="content-block text-block">
                     <h2>Lessons Learned</h2>
                     <p>
-                        Reflect on what you learned during this project. Discuss the new skills you developed, what went well, and what you might do differently next time.
+                        This project pushed me to grow quickly as a developer and gave me a deeper understanding of Unreal’s strengths. It also taught me the value of modular design and the importance of balancing polish with iteration speed.
                     </p>
                     <ul class="lessons-list">
-                        <li>Key insight or learning point from the project</li>
-                        <li>Another important lesson or skill developed</li>
-                        <li>Technical, design, or team coordination lesson</li>
-                        <li>How this project influenced your approach to future work</li>
+                        <li>Mastered key Unreal systems like pawn control, AI, and input handling</li>
+                        <li>Learned how to design flexible and reusable gameplay components</li>
+                        <li>Gained experience in balancing code performance and designer-friendly tools</li>
+                        <li>Now approach new projects with clearer architecture and prototyping strategies</li>
                     </ul>
                 </div>
             </div>
         </section>
+
+        
 
         <!-- Next Project Navigation -->
         <section class="project-navigation section-padding pt-0">
@@ -214,7 +195,7 @@ void UpdatePlayerMovement() {
                 <div class="next-prev-container">
                     <a href="project2.html" class="next-project">
                         <span>Next Project</span>
-                        <h3>Project Name 2</h3>
+                        <h3>Bioascent</h3>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

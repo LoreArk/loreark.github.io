@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name - Lorenzo's Portfolio</title>
+    <title>Space Outlaws - Lorenzo's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -21,6 +21,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io"><i class="fab fa-itch-io"></i></a>
                     </li>
@@ -31,9 +35,6 @@
                         <a class="nav-link" href="https://www.linkedin.com/in/lorenzo-pusateri" target="blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html" title="Home"><i class="fas fa-home"></i></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link nav-resume resume-btn" href="#" title="Download Resume"><i class="fas fa-file-download"></i> Resume</a>
                     </li>
@@ -59,10 +60,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6  project-meta-full" >
-                        <h1 class="project-detail-title">Space Outlaw</h1>
+                        <h1 class="project-detail-title">Space Outlaws</h1>
                         <div class="project-meta-text">
-                            <p>This project was an opportunity to explore advanced gameplay systems in Unreal Engine. We focused on responsive controls, modular AI, and a dynamic event system to create a compelling and immersive experience.</p>
-                            <p>My main contributions included the player interaction system, enemy behavior logic, and implementation of narrative events through blueprints and C++.</p>
+                            <p>
+                                A is a 3D beat 'em up inspired by games like <em>Yakuza</em> and <em>God Hand</em>, where the player assumes the role of a bounty hunter who selects missions from a central hub and then ventures into different mission levels while also managing their finances.
+                            </p>
+                            <p>
+                                I initially started this project to experiment with various types of interactable environmental objects and weapons in a fast-paced combat setting.  
+                                During the prototyping phase, I became deeply invested in the concept and decided to turn it into a full-fledged combat-focused game, influenced by both classic and modern beat 'em ups.
+                            </p>
+                            <p>
+                                The core mechanics are fully playable and provide a solid foundation for future development.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -115,69 +124,95 @@
         <section class="project-content-block section-padding pt-0">
             <div class="container">
                 <div class="content-block image-block">
-                    <h2>Feature Highlight: [Feature Name]</h2>
+                    <p>All of the following systems are designed to be <strong>easily expandable and editable via Blueprints</strong>, allowing VFX and SFX to be easily changed or added, and enabling assets such as animations and actor meshes to be easily swapped when needed.</p>
+                    
+                    <h2>Combat system</h2>
                     <p>
-                        Brief explanation of a specific gameplay feature or system that you implemented. This text introduces the GIF or image that follows.
+                        <ul class="lessons-list">
+                            <li><strong>Player-customizable combo system</strong>, allowing players to tailor their attack sequences.</li>
+                            <li><strong>AI</strong>-driven attack selection supports varied enemy designs, each with unique movesets, 
+                                ensuring diverse combat encounters. Enemy characters are designed with flexible properties, 
+                                making it easy to adjust power levels and introduce variety through Blueprint editing.</li>
+                            <li>The system includes dynamic <strong>hit effects and states</strong>, such as juggling, 
+                                staggering, stunning, and launching enemies, with directional hit reactions.</li>
+                            <li>The combat mechanics offer an enemy <strong>grab system</strong>,
+                                 a <strong>finisher system</strong> for cinematic takedowns, 
+                                 and a range of <strong>special attacks</strong> to enhance gameplay depth.</li>
+                        </ul>
                     </p>
                     <div class="feature-media">
                         <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
                     </div>
                     <p class="feature-caption">
-                        Caption explaining what's happening in the GIF above. You can provide more technical details about implementation.
+                        The moveset customization UI allows players to preview their moves and view detailed stats for each one.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="content-block image-block">
+                    
+                    <h2>Throwable Environment Objects and Weapons</h2>
+                    <p>
+                        <ul class="lessons-list">
+                            <li>Weapons with unique movesets for both player and AI driven by data assets.</li>
+                            <li>Various objects that can be thrown during combat to introduce environment interactivity. 
+                                A blueprint template allows to easily expand the environment pickable/throwable objects.</li>
+                        </ul>
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p class="feature-caption">
+                        The player picks up one of the environmental objects and throws it at the enemy. You can also see the box drop a healing item.
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="content-block image-block">
+                    
+                    <h2>Level Management</h2>
+                    <p>
+                        <ul class="lessons-list">
+                            <li>Level loading system.</li>
+                            <li>Persistent data handling to manage the flow between:
+                                <ul>
+                                    <li>HUB level</li>
+                                    <li>Arena levels</li>
+                                    <li>Mission levels</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="content-block image-block">
+                    
+                    <h2>UI System</h2>
+                    <p>Modular and scalable, developed primarily with Blueprints for faster iteration and design.</p>
+                    <p>
+                        <ul class="lessons-list">
+                            <li>Main Menu and Pause Menu, including settings and control scheme screens.</li>
+                            <li>Shops for consumables and upgrades.</li>
+                            <li>Player attack moveset personalization.</li>
+                            <li>Level selection.</li>
+                        </ul>
+                    </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <p class="feature-caption">
+                        Shops System inside the HUB level.                 
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Text Block with Code -->
-        <!-- <section class="project-content-block section-padding pt-0">
-            <div class="container">
-                <div class="content-block code-block">
-                    <h2>Technical Implementation</h2>
-                    <p>
-                        If you want to showcase specific code snippets, you can include them here with explanations. This is optional but can be valuable for demonstrating your coding approach.
-                    </p>
-                    <div class="code-snippet">
-                        <pre><code>
-// Example code snippet
-void UpdatePlayerMovement() {
-    Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-    
-    if (direction.magnitude > 0.1f) {
-        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-        
-        transform.rotation = Quaternion.Euler(0f, angle, 0f);
-        Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-        controller.Move(moveDir.normalized * speed * Time.deltaTime);
-    }
-}
-                        </code></pre>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Another GIF/Image Block -->
-        <!-- <section class="project-content-block section-padding pt-0">
-            <div class="container">
-                <div class="content-block image-block">
-                    <h2>Feature Highlight: [Another Feature]</h2>
-                    <p>
-                        Description of another gameplay feature or system that you implemented. This text introduces the following GIF or image.
-                    </p>
-                    <div class="feature-media">
-                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
-                    </div>
-                    <p class="feature-caption">
-                        Caption explaining the second feature demonstration.
-                    </p>
-                </div>
-            </div>
-        </section> -->
-        <!-- Content Blocks - These can be rearranged or duplicated as needed -->
         <!-- Text Block -->
-        <section class="project-content-block section-padding pt-0">
+        <!-- <section class="project-content-block section-padding pt-0">
             <div class="container">
                 <div class="content-block text-block">
                     <h2>Development Challenges</h2>
@@ -189,9 +224,9 @@ void UpdatePlayerMovement() {
                     </p>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Lessons Learned -->
-        <section class="project-content-block section-padding pt-0">
+        <!-- <section class="project-content-block section-padding pt-0">
             <div class="container">
                 <div class="content-block text-block">
                     <h2>Lessons Learned</h2>
@@ -206,7 +241,7 @@ void UpdatePlayerMovement() {
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Next Project Navigation -->
         <section class="project-navigation section-padding pt-0">
