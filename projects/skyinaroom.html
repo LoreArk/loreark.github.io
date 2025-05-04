@@ -63,12 +63,13 @@
                         <h1 class="project-detail-title">Sky In a Room</h1>
                         <div class="project-meta-text">
                             <p>
-                                A 2D side-scrolling shooter-platformer born from the idea of enhancing environmental interaction in a Metroid-like game, and inspired by the manga <em>Blame!</em>
+                                Project created for the digital creative contest <a href="https://www.fabermeeting.it/" target="_blank">Faber Meeting</a>, designed in collaboration with a 3D artist and developed over the course of a couple of weeks.  
+                                The project earned us a nomination and an invitation to the event, with two days of masterclasses and public presentation of the project 
+                                ( <a href="https://drive.google.com/file/d/15nVP49zjQI8Kv7WwjB4TaNFSB5W_pE1u/view" target="_blank">PDF</a>).
                             </p>
                             <p>
-                                The project started with a prototype for an interactable tile system, allowing the player to reshape platforms or destroy sections of the level.  
-                                I later expanded the system to react dynamically to enemies and introduced a jump mechanic based on the recoil of the player’s charged shot.  
-                                These experimental features eventually came together into a fully playable demo.
+                                Sky In A Room is a desktop visual experience developed with Unreal Engine 5.2.
+                                This was my first project using Unreal Engine, where I became familiar with the editor, Blueprints, and level streaming.
                             </p>
                         </div>
                     </div>
@@ -102,35 +103,15 @@
                 <div class="content-block image-block">
                     
                     <h2>Main Features</h2>
-                    <p>Physics-based bouncing bullets can be utilized to shoot behind obstacles, while releasing a charged shot pushes the player, aiding in platforming.
-                    </p>
-                    <div class="feature-media">
-                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
-                    </div>
-                    <p class="feature-caption">
-                        Bouncing bullet gameplay example.
-                    </p>
+                    
                     <p>
-                        Shootable tiles system: various types of interactive tiles 
-                        with unique interactions and behaviors triggered by a ‘damagable’ interface. 
-                        Each type of tile can interact with the others:
                         <ul class="lessons-list">
-                            <li>Falling tile groups – consist of individual tiles that can be freely assembled in the editor. 
-                                Damaging them activates their group physics, altering the walkable area and platform shape. 
-                                When falling, they can damage the player, enemies, and other tiles.”</li>
-                            <li>Explosive tile – detonate upon impact, damaging everything nearby. 
-                                They can trigger chain reactions if other explosives or shootable tiles are in proximity.</li>
-                            <li>Destructible tile – can be destroyed by the player’s attacks or by other interactive tiles, 
-                                allowing passages to be opened in the level.</li>
+                            <li>First person controller</li>
+                            <li>Procedurally generated corridor with events triggered based on the number of rooms traveled.</li>
+                            <li>Render target texture with a portal function serving as a transition to a different scene.</li>
+                            <li>Destructible walls.</li>
                         </ul>
                     </p>
-                    <div class="feature-media">
-                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
-                    </div>
-                    <p class="feature-caption">
-                        Explosive and Falling tiles combined.
-                    </p>
-
                 </div>
             </div>
 
@@ -139,7 +120,7 @@
             <div class="container">
                 <div class="next-prev-container">
                     <a href="../" class="next-project">
-                        <span>Next Project</span>
+                        <!-- <span>Next Project</span> -->
                         <h3>Back to all projects</h3>
                         <i class="fas fa-arrow-right"></i>
                     </a>

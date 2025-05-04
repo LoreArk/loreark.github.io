@@ -63,12 +63,11 @@
                         <h1 class="project-detail-title">Laughing Stonks (GGJ 2024)</h1>
                         <div class="project-meta-text">
                             <p>
-                                A 2D side-scrolling shooter-platformer born from the idea of enhancing environmental interaction in a Metroid-like game, and inspired by the manga <em>Blame!</em>
+                                A project developed for the 2024 Global Game Jam, created in collaboration with a 3D artist, a game designer, and a sound designer.
                             </p>
                             <p>
-                                The project started with a prototype for an interactable tile system, allowing the player to reshape platforms or destroy sections of the level.  
-                                I later expanded the system to react dynamically to enemies and introduced a jump mechanic based on the recoil of the player’s charged shot.  
-                                These experimental features eventually came together into a fully playable demo.
+                                A "stealth" game where you play as a character with a laugh meter that gradually fills up — especially in reaction to the unpredictable behavior of NPCs.  
+                                The challenge is to release laughter only when unobserved, all while completing mundane office tasks.
                             </p>
                         </div>
                     </div>
@@ -102,34 +101,26 @@
                 <div class="content-block image-block">
                     
                     <h2>Main Features</h2>
-                    <p>Physics-based bouncing bullets can be utilized to shoot behind obstacles, while releasing a charged shot pushes the player, aiding in platforming.
-                    </p>
-                    <div class="feature-media">
-                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
-                    </div>
-                    <p class="feature-caption">
-                        Bouncing bullet gameplay example.
-                    </p>
                     <p>
-                        Shootable tiles system: various types of interactive tiles 
-                        with unique interactions and behaviors triggered by a ‘damagable’ interface. 
-                        Each type of tile can interact with the others:
-                        <ul class="lessons-list">
-                            <li>Falling tile groups – consist of individual tiles that can be freely assembled in the editor. 
-                                Damaging them activates their group physics, altering the walkable area and platform shape. 
-                                When falling, they can damage the player, enemies, and other tiles.”</li>
-                            <li>Explosive tile – detonate upon impact, damaging everything nearby. 
-                                They can trigger chain reactions if other explosives or shootable tiles are in proximity.</li>
-                            <li>Destructible tile – can be destroyed by the player’s attacks or by other interactive tiles, 
-                                allowing passages to be opened in the level.</li>
-                        </ul>
+                        NPCs of different types and behaviors (state-machine driven AI).
+                         This variety is achieved using Unity prefab variants and a modular system of events that utilizes Unity Scriptable Objects.
                     </p>
                     <div class="feature-media">
                         <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
                     </div>
-                    <p class="feature-caption">
-                        Explosive and Falling tiles combined.
+                    <!-- <p class="feature-caption">
+                        Bouncing bullet gameplay example.
+                    </p> -->
+                    <p>
+                        Each NPC can be equipped with probability-based events (triggered at waypoints, see below) 
+                        or time-based events with a random deviation between a minimum and maximum value.
                     </p>
+                    <div class="feature-media">
+                        <img src="/api/placeholder/800/450" alt="Feature demonstration" class="feature-gif">
+                    </div>
+                    <!-- <p class="feature-caption">
+                        Explosive and Falling tiles combined.
+                    </p> -->
 
                 </div>
             </div>
