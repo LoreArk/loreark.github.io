@@ -108,7 +108,6 @@ a:hover {
     color: white;
     transform: translateY(-2px);
 }
-
 .secondary-btn {
     background-color: transparent;
     color: var(--text-color);
@@ -175,7 +174,7 @@ a:hover {
 }
 
 .resume-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: #e6364a;
     transform: translateY(-2px);
 }
 
