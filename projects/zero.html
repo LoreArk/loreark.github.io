@@ -11,48 +11,42 @@
 </head>
 
 <body>
-    <!-- Fixed navbar - same as homepage -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+    <!-- Fixed navbar -->
+    <nav class="navbar fixed-top">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
             <div class="navbar-brand">
                 <div class="dev-name">Lorenzo Pusateri</div>
                 <div class="dev-subtitle">Gameplay Programmer & Game Developer</div>
-                <!-- <div><a href="../" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a></div> -->
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav d-flex flex-row ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io">
+                        <i class="fab fa-itch-io"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/LoreArk" target="blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/lorenzo-pusateri" target="blank"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-resume resume-btn" href="assets/files/LorenzoPusateriResume.pdf" download
+                        title="Download Resume">
+                        <i class="fas fa-file-download"></i> Resume
+                    </a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://loreark.itch.io/" target="blank" title="Itch.io"><i
-                                class="fab fa-itch-io"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/LoreArk" target="blank" title="GitHub"><i
-                                class="fab fa-github"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/lorenzo-pusateri" target="blank"
-                            title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link nav-resume resume-btn" href="/assets/files/LorenzoPusateriResume.pdf"
-                            download title="Download Resume">
-                            <i class="fas fa-file-download"></i> Resume
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../" title="Home"><i class="fas fa-home"></i></a>
+                </li>
+            </ul>
         </div>
-
-
     </nav>
 
     <!-- Main content -->
@@ -98,7 +92,7 @@
                             </div>
                             <div class="meta-item">
                                 <i class="far fa-clock"></i>
-                                <span>Development Time: 4 months</span>
+                                <span>Development Time: 6 months</span>
                             </div>
                             <div class="meta-item">
                                 <i class="fas fa-code"></i>
@@ -145,7 +139,8 @@
                         The possession system is built around a <strong>Possessable Interface</strong> and a
                         <strong>Possessable base class</strong>, allowing the player to seamlessly take control of any
                         compatible pawn type — including enemies, NPCs, or future companions.
-                        When a pawn is possessed, its <strong>AIController</strong> and Behavior Tree are deactivated, and
+                        When a pawn is possessed, its <strong>AIController</strong> and Behavior Tree are deactivated,
+                        and
                         input is redirected through the player’s controller, which dynamically maps controls based on
                         the possessed pawn’s type and abilities.
                         The system was designed for scalability, enabling different types of possession without
@@ -255,20 +250,27 @@
             </div>
         </section>
 
-
-
-        <!-- Next Project Navigation -->
+        <!-- Next & Previous Project Navigation -->
         <section class="project-navigation section-padding pt-0">
             <div class="container">
                 <div class="next-prev-container">
-                    <a href="bioascent.html" class="next-project">
-                        <span>Next Project</span>
-                        <h3>Bioascent</h3>
-                        <i class="fas fa-arrow-right"></i>
+                    <!-- Back / Previous-like -->
+                    <a href="spaceoutlaw.html" class="project-card-nav is-back">
+                        <i class="fas fa-arrow-left icon"></i>
+                        <span class="label">Previous Project</span>
+                        <h3 class="title">Space Outlaw</h3>
+                    </a>
+
+                    <!-- Next -->
+                    <a href="bioascent.html" class="project-card-nav is-next">
+                        <i class="fas fa-arrow-right icon"></i>
+                        <span class="label">Next Project</span>
+                        <h3 class="title">Bioascent</h3>
                     </a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer - same as homepage -->
@@ -276,7 +278,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; 2025 Lorenzo. All rights reserved.</p>
+                    <p>&copy; 2025 Lorenzo Pusateri. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="footer-social">

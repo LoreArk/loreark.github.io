@@ -45,9 +45,13 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 76px; /* Spazio per la navbar fissa */
+    padding-top: 76px; 
 }
-
+@media (max-width: 767px) {
+    body {
+        padding-top: 140px;
+    }
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font);
     font-weight: 700;
@@ -182,7 +186,84 @@ a:hover {
     border: none;
     color: var(--text-color);
 }
+.navbar-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
 
+.navbar-nav .nav-link {
+    font-size: 1.8rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.navbar .resume-btn {
+    font-size: 0.95rem;
+    padding: 6px 12px !important;
+}
+.navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.navbar-nav .nav-resume {
+    margin-top: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left;
+        gap: 6px;
+    }
+
+    .navbar-brand {
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 4px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start !important;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+    /*MARGINS*/
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+
+    .nav-resume {
+        padding: 6px 12px !important;
+        font-size: 0.9rem;
+    }
+       .navbar {
+        padding: 12px 20px; 
+    }
+
+    .navbar .container {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 6px;
+    }
+
+    .navbar-brand .dev-name {
+        margin-bottom: 2px;
+    }
+
+    .navbar-nav {
+        margin-top: 4px;
+    }
+}
 /* ======================================================
    HERO SECTION
    ====================================================== */
@@ -596,47 +677,96 @@ footer {
 .lessons-list li {
     margin-bottom: 10px;
 }
-
-.next-prev-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
+/* NAV CARDS – stile unificato */
+.project-card-nav{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--card-bg-color);
+  border-radius: var(--card-radius);
+  padding: 18px 20px 24px;
+  width: 280px;                /* coerente con le vecchie card */
+  min-height: 120px;
+  text-decoration: none;
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
 
-.next-project {
-    display: flex;
+.project-card-nav .label{
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.project-card-nav .title{
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.project-card-nav .icon{
+  position: absolute;
+  bottom: 12px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Direzioni */
+.project-card-nav.is-next{
+  align-items: flex-end;
+  text-align: right;
+}
+.project-card-nav.is-next .icon{
+  right: 14px;
+}
+.project-card-nav.is-next:hover{
+  transform: translateX(5px);
+}
+.project-card-nav.is-next:hover .icon{
+  transform: translateX(3px);
+}
+
+.project-card-nav.is-back{
+  align-items: flex-start;
+  text-align: left;
+}
+.project-card-nav.is-back .icon{
+  left: 14px;
+}
+.project-card-nav.is-back:hover{
+  transform: translateX(-5px);
+}
+.project-card-nav.is-back:hover .icon{
+  transform: translateX(-3px);
+}
+
+.next-prev-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px){
+  .next-prev-container{
     flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
-    background-color: var(--card-bg-color);
-    border-radius: var(--card-radius);
-    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
-    max-width: 300px;
+    align-items: center;
+  }
+  .project-card-nav{
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+    align-items: center;
+  }
+  .project-card-nav.is-next .icon{
+    right: 14px;
+  }
+  .project-card-nav.is-back .icon{
+    left: 14px;
+  }
 }
-
-.next-project:hover {
-    transform: translateX(5px);
-    background-color: rgba(126, 73, 227, 0.2);
-}
-
-.next-project span {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    margin-bottom: 5px;
-}
-
-.next-project h3 {
-    margin-bottom: 5px;
-    font-size: 1.3rem;
-    color: var(--text-color);
-}
-
-.next-project i {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-
 /* ======================================================
    RESPONSIVE DESIGN
    ====================================================== */
