@@ -54,6 +54,12 @@ body {
     }
 }
 
+@media (max-width: 400px) {
+    body {
+        padding-top: 90px;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -223,47 +229,210 @@ a:hover {
     display: flex;
     align-items: center;
 }
+
+.fas {
+    padding-right: 5px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
+}
+
 @media (max-width: 1000px) {
-  
-  .navbar { padding: 12px 0; }
-  .navbar .container { padding: 0 16px; }
 
-  .navbar .ms-auto { margin-left: 0 !important; }
+    .navbar {
+        padding: 12px 0;
+    }
 
-  .navbar-nav {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    justify-content: flex-start; 
-    gap: 10px;
-    flex-wrap: nowrap;
-  }
+    .navbar .container {
+        padding: 0 16px;
+    }
 
-  .navbar-nav .nav-link i { font-size: inherit; }
-  .nav-resume { padding: 6px 12px !important; white-space: nowrap; }
+    .navbar .ms-auto {
+        margin-left: 0 !important;
+    }
+
+    .navbar-nav {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-nav .nav-link i {
+        font-size: inherit;
+    }
+
+    .navbar-nav .nav-item .nav-link.nav-resume.resume-btn i {
+        font-size: 0.95rem;
+        margin-right: 4px;
+    }
+
+    .resume-btn {
+        height: 38px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -1px;
+    }
+
+    .nav-resume {
+        padding: 6px 12px !important;
+        white-space: nowrap;
+    }
+
+    .fas {
+        padding-right: 5px;
+    }
 }
 
 @media (max-width: 400px) {
-  .navbar-brand .dev-name {
-    font-size: 1.8rem;
-  }
+    .navbar-brand .dev-name {
+        font-size: 1.8rem;
+    }
 
-  .navbar-brand .dev-subtitle {
-    font-size: 0.9rem;
-  }
+    .navbar-brand .dev-subtitle {
+        font-size: 0.9rem;
+    }
 
-  .navbar-nav .nav-link i {
-    font-size: 1.4rem;
-  }
+    .navbar-nav .nav-link i {
+        font-size: 2rem;
+    }
 
-  .navbar-nav {
-    gap: 6px;
-  }
 
-  .nav-resume {
-    font-size: 0.9rem;
-    padding: 5px 10px !important;
-  }
+    .navbar-nav {
+        gap: 2px;
+    }
+
+    .nav-resume {
+        font-size: 0.9rem;
+        padding: 5px 10px !important;
+    }
+
+    .resume-btn {
+        height: 33px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+    }
+
+    .fas {
+        padding-right: 5px;
+    }
+
+    .navbar-nav .nav-item .nav-link.nav-resume.resume-btn i {
+        font-size: 0.95rem;
+        margin-right: 4px;
+
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
 }
+
+@media (max-width: 342px) {
+    .navbar-brand .dev-name {
+        font-size: 1.5rem;
+    }
+
+    .navbar-brand .dev-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link i {
+        font-size: 1.6rem;
+        padding-left: 0px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+
+    .navbar-nav {
+        gap: 0px;
+    }
+
+    .nav-resume {
+        margin: 5px;
+        font-size: 0.2rem;
+        padding: 2px 5px !important;
+    }
+
+    .navbar-nav .nav-item .nav-link.nav-resume.resume-btn i {
+        font-size: 0.95rem;
+        margin-right: 4px;
+    }
+
+    .resume-btn {
+        height: 32px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -1px;
+    }
+
+    .fas {
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 290px) {
+    .navbar-brand .dev-name {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand .dev-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .navbar-nav .nav-link i {
+        font-size: 1.3rem;
+        padding-left: 0px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        padding-top: 5px !important;
+        padding-bottom: 4px !important;
+    }
+
+    .navbar-nav {
+        gap: 0px;
+    }
+
+    .nav-resume {
+        margin: 5px;
+        font-size: 0.1rem;
+        padding: 2px 5px !important;
+    }
+
+    .navbar-nav .nav-item .nav-link.nav-resume.resume-btn i {
+        font-size: 0.8rem;
+        margin-right: 1px;
+    }
+
+    .resume-btn {
+        height: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -6px;
+    }
+
+    .fas {
+        padding-right: 2px;
+    }
+}
+
 /* ======================================================
    HERO SECTION
    ====================================================== */
