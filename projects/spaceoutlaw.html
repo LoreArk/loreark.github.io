@@ -71,20 +71,23 @@
                         <h1 class="project-detail-title">Space Outlaw</h1>
                         <div class="project-meta-text">
                             <p>
-                                A is a 3D beat 'em up inspired by games like <em>Yakuza</em> and <em>God Hand</em>,
-                                where the player assumes the role of a bounty hunter who selects missions from a central
-                                hub and then ventures into different mission levels while also managing their finances.
+                                A 3D beat 'em up inspired by games like <em>Yakuza</em> and <em>God Hand</em>, where the
+                                player takes on the role of a bounty hunter accepting contracts from a central hub and
+                                venturing into different mission levels while managing resources and upgrades.
                             </p>
                             <p>
-                                I initially started this project to experiment with various types of interactable
-                                environmental objects and weapons in a fast-paced combat setting.
-                                During the prototyping phase, I became deeply invested in the concept and decided to
-                                turn it into a full-fledged combat-focused game, influenced by both classic and modern
-                                beat 'em ups.
+                                Initially conceived as an experiment with interactable environmental objects and
+                                throwable weapons, the project evolved into a fully featured combat prototype focused on
+                                responsive melee mechanics, modular AI systems, and a data-driven combat framework.
                             </p>
                             <p>
-                                The core mechanics are fully playable and provide a solid foundation for future
-                                development.
+                                The game also includes a <strong>online cooperative mode</strong>, built
+                                using Unreal’s RPC framework and <strong>Steamworks SDK</strong> for matchmaking and
+                                lobby management.
+                            </p>
+                            <p>
+                                The core mechanics and progression systems are fully playable, providing a solid
+                                foundation for future development.
                             </p>
                         </div>
                     </div>
@@ -110,7 +113,7 @@
                                 <a href="https://github.com/LoreArk/FightingProject/tree/main" target="blank"
                                     class="project-link github"><i class="fab fa-github"></i> View on GitHub</a>
                                 <a href="https://loreark.itch.io/space-outlaw-proto" target="blank"
-                                    class="project-link itchio"><i class="fab fa-itch-io"></i> Demo on Itch.io</a>
+                                    class="project-link itchio"><i class="fab fa-itch-io"></i> Prototype on Itch.io</a>
                             </div>
                         </div>
                     </div>
@@ -174,13 +177,18 @@
             <div class="container">
                 <div class="content-block image-block">
 
-                    <h2>Throwable Environment Objects and Weapons</h2>
+                    <h2>Throwable Environment Objects and Destructible Props</h2>
                     <p>
                     <ul class="lessons-list">
-                        <li>Weapons with unique movesets for both player and AI driven by data assets.</li>
-                        <li>Various objects that can be thrown during combat to introduce environment interactivity.
-                            A blueprint template allows to easily expand the environment pickable/throwable objects.
-                        </li>
+                        <li>Weapons with unique movesets for both player and AI, fully data-driven through archetype
+                            assets.</li>
+                        <li>Environment props and debris can be picked up, thrown, or destroyed, enhancing combat
+                            interactivity.</li>
+                        <li>The system leverages <strong>Chaos Physics</strong> for real-time destructibility and
+                            dynamic object reactions, allowing props to fracture, impact enemies, or chain-react with
+                            nearby elements.</li>
+                        <li>A reusable Blueprint template makes it easy to expand the pool of throwable or destructible
+                            items directly from the editor.</li>
                     </ul>
                     </p>
                     <div class="feature-media">
@@ -208,7 +216,29 @@
                     </p>
                 </div>
             </div>
+            <div class="container">
+                <div class="content-block image-block">
 
+                    <h2>Multiplayer System (RPC and Steamworks SDK)</h2>
+                    <p>
+                    <ul class="lessons-list">
+                        <li>Implemented <strong>cooperative multiplayer</strong> using Unreal’s RPC framework for
+                            networked player actions, enemy synchronization, and shared mission states.</li>
+                        <li>Integrated <strong>Steamworks SDK</strong> for matchmaking, lobby management, and friend
+                            invites, supporting seamless session hosting and joining through Steam.</li>
+                        <li>Handled <strong>replication logic</strong> for abilities, inventory, and combat state to
+                            ensure smooth synchronization across clients.</li>
+                    </ul>
+                    </p>
+                    <!-- <div class="feature-media">
+                        <img src="/assets/GIFs/Fighter/SteamMatchmaking.gif" alt="Multiplayer demonstration"
+                            class="feature-gif">
+                    </div> -->
+                    <!-- <p class="feature-caption">
+                        Cooperative session established through Steam matchmaking with replicated player actions.
+                    </p> -->
+                </div>
+            </div>
             <div class="container">
                 <div class="content-block image-block">
 
